@@ -37,6 +37,7 @@ else
     source .venv/bin/activate
 
     # Install runtime deps (without installing this project as a package).
+    python -m pip --version >/dev/null 2>&1 || python -m ensurepip --upgrade
     python -m pip install -U pip
     python -m pip install -U \
         maturin \
